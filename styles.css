@@ -149,19 +149,21 @@ footer {
   font-weight: 600;
 }
 
-.choice-option {
+.contact-container .choice-option {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   gap: 12px;
   margin-bottom: 12px;
   font-weight: 400;
 }
 
-.choice-option:last-child {
+.contact-container .choice-option:last-child {
   margin-bottom: 0;
 }
 
-.choice-option input {
+.contact-container .choice-option input {
+  flex: 0 0 auto;
   width: auto;
   margin: 0;
 }
