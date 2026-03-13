@@ -109,3 +109,40 @@ footer {
   text-align: center;
   padding: 12px;
 }
+
+.contact-container {
+  width: 50%;
+  margin: 24px auto 0;
+  padding: 24px;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.contact-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.contact-container input,
+.contact-container select,
+.contact-container textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+.contact-container button {
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+}
