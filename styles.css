@@ -125,7 +125,8 @@ footer {
   font-weight: 600;
 }
 
-.contact-container input,
+.contact-container input[type="text"],
+.contact-container input[type="email"],
 .contact-container select,
 .contact-container textarea {
   width: 100%;
@@ -135,6 +136,34 @@ footer {
   border-radius: 6px;
   box-sizing: border-box;
   font: inherit;
+}
+
+.choice-group {
+  margin: 0 0 20px;
+  padding: 18px 20px;
+  border: 1px solid #e5e7eb;
+}
+
+.choice-group legend {
+  padding: 0 8px;
+  font-weight: 600;
+}
+
+.choice-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-weight: 400;
+}
+
+.choice-option:last-child {
+  margin-bottom: 0;
+}
+
+.choice-option input {
+  width: auto;
+  margin: 0;
 }
 
 .contact-container button {

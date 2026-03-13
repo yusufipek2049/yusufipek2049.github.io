@@ -54,6 +54,32 @@
             <option value="geri-bildirim">Geri Bildirim</option>
           </select>
         </div>
+        <fieldset class="choice-group">
+          <legend>İletişim Tercihi:</legend>
+          <label class="choice-option" for="contact-email">
+            <input type="radio" id="contact-email" name="contact-preference" value="email" checked>
+            Bana e-posta ile ulaşın
+          </label>
+          <label class="choice-option" for="contact-phone">
+            <input type="radio" id="contact-phone" name="contact-preference" value="phone">
+            Bana telefonla ulaşın
+          </label>
+        </fieldset>
+        <fieldset class="choice-group">
+          <legend>İlgi Alanları / Yetenekler:</legend>
+          <label class="choice-option" for="skill-html">
+            <input type="checkbox" id="skill-html" name="skills" value="html">
+            HTML
+          </label>
+          <label class="choice-option" for="skill-css">
+            <input type="checkbox" id="skill-css" name="skills" value="css">
+            CSS
+          </label>
+          <label class="choice-option" for="skill-algorithm">
+            <input type="checkbox" id="skill-algorithm" name="skills" value="algorithm">
+            Algoritma
+          </label>
+        </fieldset>
         <div>
           <label for="message">Mesaj</label>
           <textarea id="message" name="message" rows="5"></textarea>
