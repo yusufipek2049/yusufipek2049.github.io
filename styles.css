@@ -112,11 +112,10 @@ footer {
 
 .contact-container {
   width: 50%;
-  margin: 24px auto 0;
+  margin: 24px auto 24px;
   padding: 24px;
   background-color: #ffffff;
   border: 1px solid #d1d5db;
-  border-radius: 10px;
   box-sizing: border-box;
 }
 
