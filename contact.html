@@ -3,65 +3,95 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Yusuf - Iletisim</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Yusuf - İletişim</title>
+  <link rel="stylesheet" href="styles.css?v=2">
 </head>
 <body>
-  <div class="wrapper">
-    <nav class="navbar">
-      <div class="logo">Yusuf Ipek</div>
-      <ul class="nav-links">
+  <div class="container">
+    <nav>
+      <ul>
         <li><a href="index.html">Ana Sayfa</a></li>
-        <li><a href="about.html">Hakkimda</a></li>
-        <li><a href="interests.html">Ilgi Alanlarim</a></li>
-        <li><a href="contact.html">Iletisim</a></li>
+        <li><a href="about.html">Hakkımda</a></li>
+        <li><a href="interests.html">İlgi Alanlarım</a></li>
+        <li><a href="contact.html">İletişim</a></li>
       </ul>
     </nav>
 
-    <section class="hero">
-      <div class="hero-copy">
-        <h1>Iletisim</h1>
-        <p>Sorularin, proje fikirlerin veya is birligi taleplerin icin bana ulasabilirsin.</p>
-        <a class="hero-btn" href="mailto:yusufipek2049@gmail.com">E-posta Gonder</a>
-      </div>
-      <div class="hero-visual">Iletisim Placeholder</div>
-    </section>
+    <header>
+      <h1>İletişim</h1>
+      <p>Bana ulaşmak için kullanabileceğiniz temel iletişim bilgileri bu sayfada yer alıyor.</p>
+    </header>
 
-    <section class="cards-section">
-      <article class="info-card">
-        <h2>E-posta</h2>
-        <p>yusufipek2049@gmail.com</p>
-      </article>
-      <article class="info-card">
-        <h2>GitHub</h2>
-        <p>github.com/yusufipek2049</p>
-      </article>
-      <article class="info-card">
-        <h2>LinkedIn</h2>
-        <p>linkedin.com/in/yusuf-ipek-19bb93253</p>
-      </article>
-      <article class="info-card">
-        <h2>X</h2>
-        <p>x.com/distelligent</p>
-      </article>
-      <article class="info-card">
-        <h2>Calisma Saati</h2>
-        <p>Hafta ici 09:00 - 18:00</p>
-      </article>
-      <article class="info-card">
-        <h2>Geri Donus</h2>
-        <p>Mesajlara en gec 24 saat icinde donus hedeflenir.</p>
-      </article>
-    </section>
+    <main class="layout">
+      <section class="content-box content">
+        <h2>Doğrudan Ulaşım</h2>
+        <p>E-posta adresim: <a href="mailto:yusufipek2049@gmail.com">yusufipek2049@gmail.com</a></p>
+        <p>GitHub profilim: <a href="https://github.com/yusufipek2049" target="_blank" rel="noopener">github.com/yusufipek2049</a></p>
+      </section>
 
-    <section class="grow-recap">
-      <div class="grow-box grow-1">Kutu 1 - flex-grow: 1</div>
-      <div class="grow-box grow-2">Kutu 2 - flex-grow: 2</div>
-      <div class="grow-box grow-3">Kutu 3 - flex-grow: 1</div>
-    </section>
+      <aside class="content-box sidebar">
+        <h2>Sosyal Hesaplar</h2>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/yusuf-ipek-19bb93253/" target="_blank" rel="noopener">linkedin.com/in/yusuf-ipek-19bb93253</a></p>
+        <p>X hesabım: <a href="https://x.com/distelligent" target="_blank" rel="noopener">x.com/distelligent</a></p>
+      </aside>
+    </main>
 
-    <footer class="footer">
-      <p>&copy; 2026 Yusuf Ipek - Tum haklari saklidir.</p>
+    <div class="contact-container">
+      <form action="#" method="post">
+        <div>
+          <label for="full-name">Ad Soyad</label>
+          <input type="text" id="full-name" name="full-name">
+        </div>
+        <div>
+          <label for="email">E-posta</label>
+          <input type="email" id="email" name="email">
+        </div>
+        <div>
+          <label for="subject">Konu</label>
+          <select id="subject" name="subject">
+            <option value="is-teklifi">İş Teklifi</option>
+            <option value="soru">Soru</option>
+            <option value="geri-bildirim">Geri Bildirim</option>
+          </select>
+        </div>
+        <fieldset class="choice-group">
+          <legend>İletişim Tercihi:</legend>
+          <label class="choice-option" for="contact-email">
+            <input type="radio" id="contact-email" name="contact-preference" value="email" checked>
+            Bana e-posta ile ulaşın
+          </label>
+          <label class="choice-option" for="contact-phone">
+            <input type="radio" id="contact-phone" name="contact-preference" value="phone">
+            Bana telefonla ulaşın
+          </label>
+        </fieldset>
+        <fieldset class="choice-group">
+          <legend>İlgi Alanları / Yetenekler:</legend>
+          <label class="choice-option" for="skill-html">
+            <input type="checkbox" id="skill-html" name="skills" value="html">
+            HTML
+          </label>
+          <label class="choice-option" for="skill-css">
+            <input type="checkbox" id="skill-css" name="skills" value="css">
+            CSS
+          </label>
+          <label class="choice-option" for="skill-algorithm">
+            <input type="checkbox" id="skill-algorithm" name="skills" value="algorithm">
+            Algoritma
+          </label>
+        </fieldset>
+        <div>
+          <label for="message">Mesaj</label>
+          <textarea id="message" name="message" rows="5"></textarea>
+        </div>
+        <div>
+          <button type="submit">Gönder</button>
+        </div>
+      </form>
+    </div>
+
+    <footer>
+      <p>© 2026 Yusuf İpek - Tüm hakları saklıdır.</p>
     </footer>
   </div>
 </body>
