@@ -18,15 +18,26 @@ p {
 
 /* Eski yapi: index + contact */
 .container {
-  --container-pad: 20px;
+  --container-pad: clamp(10px, 2vw, 24px);
+  --container-gap: clamp(12px, 1.4vw, 20px);
+  --container-box-pad: clamp(10px, 1.2vw, 18px);
+  --container-font: clamp(0.96rem, 0.35vw + 0.88rem, 1.08rem);
+  --container-h1: clamp(2rem, 2.2vw + 1.15rem, 3rem);
+  --container-h2: clamp(1.55rem, 1.1vw + 1rem, 2.15rem);
+  --container-line: clamp(1.4, 1.2vw + 1.1, 1.62);
+  --container-nav-font: clamp(1rem, 0.45vw + 0.9rem, 1.24rem);
+  --container-nav-gap: clamp(0.4rem, 1vw, 1rem);
+  --container-nav-pad-y: clamp(0.35rem, 0.75vw, 0.6rem);
+  --container-nav-pad-x: clamp(0.45rem, 0.95vw, 0.9rem);
+  --container-form-pad: clamp(14px, 1.5vw, 24px);
   max-width: 1100px;
   margin: 0 auto;
   padding: var(--container-pad);
 }
 
 .container .navbar {
-  margin-bottom: 16px;
-  height: 10vh;
+  margin-bottom: var(--container-gap);
+  height: clamp(64px, 10vh, 96px);
   padding: 0 2vw;
   margin-left: calc(var(--container-pad) * -1);
   margin-right: calc(var(--container-pad) * -1);
@@ -41,29 +52,45 @@ p {
   margin-left: auto;
   justify-content: flex-end;
   flex-wrap: wrap;
+  gap: var(--container-nav-gap);
+}
+
+.container .nav-links a {
+  font-size: var(--container-nav-font);
+  padding: var(--container-nav-pad-y) var(--container-nav-pad-x);
 }
 
 .container header {
   background-color: #ffffff;
   border: 1px solid #d1d5db;
-  padding: 16px;
-  margin-bottom: 16px;
+  padding: var(--container-box-pad);
+  margin-bottom: var(--container-gap);
+}
+
+.container h1 {
+  font-size: var(--container-h1);
+  line-height: 1.2;
+}
+
+.container h2 {
+  font-size: var(--container-h2);
+  line-height: 1.22;
 }
 
 .layout {
   display: grid;
   grid-template-columns: minmax(0, 2.2fr) minmax(0, 1fr);
   align-items: stretch;
-  gap: 2%;
-  margin-bottom: 16px;
+  gap: var(--container-gap);
+  margin-bottom: var(--container-gap);
 }
 
 .content-box {
   display: block;
   background-color: #ffffff;
   border: 1px solid #d1d5db;
-  padding: 12px;
-  font-size: 16px;
+  padding: var(--container-box-pad);
+  font-size: var(--container-font);
 }
 
 .content {
@@ -80,16 +107,16 @@ p {
 }
 
 .content p {
-  font-size: 16px;
+  font-size: var(--container-font);
   color: #374151;
-  line-height: 1.5;
+  line-height: var(--container-line);
   text-align: left;
 }
 
 .sidebar p {
-  font-size: 15px;
+  font-size: clamp(0.92rem, 0.28vw + 0.85rem, 1.02rem);
   color: #111827;
-  line-height: 1.45;
+  line-height: clamp(1.35, 1vw + 1.05, 1.55);
   text-align: justify;
 }
 
@@ -109,7 +136,7 @@ p {
 .content ul,
 .content ol,
 .sidebar ul {
-  margin: 0 0 14px 20px;
+  margin: 0 0 clamp(10px, 1vw, 14px) clamp(16px, 1.5vw, 22px);
   padding: 0;
   line-height: 1.6;
   color: #374151;
@@ -117,8 +144,8 @@ p {
 
 .contact-container {
   width: min(100%, 560px);
-  margin: 24px auto;
-  padding: 24px;
+  margin: var(--container-gap) auto;
+  padding: var(--container-form-pad);
   background-color: #ffffff;
   border: 1px solid #d1d5db;
 }
@@ -129,8 +156,9 @@ p {
 
 .contact-container label {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: clamp(6px, 0.7vw, 10px);
   font-weight: 600;
+  font-size: var(--container-font);
 }
 
 .contact-container input[type="text"],
@@ -138,15 +166,16 @@ p {
 .contact-container select,
 .contact-container textarea {
   width: 100%;
-  padding: 12px;
-  margin-bottom: 16px;
+  padding: clamp(10px, 1vw, 14px);
+  margin-bottom: var(--container-gap);
   border: 1px solid #e5e7eb;
   font: inherit;
+  font-size: var(--container-font);
 }
 
 .choice-group {
-  margin: 0 0 20px;
-  padding: 18px 20px;
+  margin: 0 0 var(--container-gap);
+  padding: clamp(12px, 1.3vw, 18px) clamp(14px, 1.6vw, 20px);
   border: 1px solid #e5e7eb;
 }
 
@@ -159,8 +188,8 @@ p {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 12px;
-  margin-bottom: 12px;
+  gap: clamp(8px, 1vw, 12px);
+  margin-bottom: clamp(8px, 0.9vw, 12px);
   font-weight: 400;
 }
 
@@ -178,7 +207,8 @@ p {
   background-color: #2563eb;
   color: #ffffff;
   border: none;
-  padding: 12px 24px;
+  padding: clamp(10px, 1vw, 12px) clamp(16px, 2vw, 24px);
+  font-size: var(--container-font);
   cursor: pointer;
 }
 
@@ -359,6 +389,7 @@ p {
 .container .footer {
   margin-left: calc(var(--container-pad) * -1);
   margin-right: calc(var(--container-pad) * -1);
+  height: clamp(60px, 10vh, 92px);
 }
 
 .footer p {
@@ -373,33 +404,33 @@ p {
   }
 
   .container {
-    --container-pad: 14px;
+    --container-pad: clamp(10px, 2.8vw, 14px);
   }
 
   .container .navbar {
     height: auto;
     min-height: 64px;
-    padding: 10px 12px;
+    padding: clamp(8px, 2vw, 12px);
     align-items: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: clamp(8px, 1.6vw, 10px);
   }
 
   .container .logo {
-    font-size: 1rem;
+    font-size: clamp(1rem, 0.8vw + 0.82rem, 1.08rem);
   }
 
   .container .nav-links {
     width: 100%;
     justify-content: flex-start;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: clamp(0.35rem, 1.4vw, 0.5rem);
   }
 
   .layout {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: clamp(10px, 2vw, 12px);
   }
 
   .content,
@@ -410,8 +441,8 @@ p {
 
   .contact-container {
     width: 100%;
-    margin: 16px 0;
-    padding: 16px;
+    margin: clamp(10px, 2vw, 16px) 0;
+    padding: clamp(12px, 2.4vw, 16px);
   }
 
   .contact-container button {
@@ -421,7 +452,7 @@ p {
   .container .footer {
     height: auto;
     min-height: 56px;
-    padding: 12px;
+    padding: clamp(10px, 2.2vw, 12px);
   }
 
   .hero-copy,
@@ -452,7 +483,7 @@ p {
   .content-box,
   .contact-container,
   .choice-group {
-    padding: 12px;
+    padding: clamp(10px, 3vw, 12px);
   }
 
   .contact-container .choice-option {
@@ -467,7 +498,7 @@ p {
 
 @media (max-width: 360px) {
   .container {
-    --container-pad: 10px;
+    --container-pad: clamp(8px, 2.8vw, 10px);
   }
 
   .container .logo {
