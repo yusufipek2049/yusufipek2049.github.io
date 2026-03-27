@@ -23,6 +23,10 @@ p {
   padding: 20px;
 }
 
+.container .navbar {
+  margin-bottom: 16px;
+}
+
 .container header {
   background-color: #ffffff;
   border: 1px solid #d1d5db;
@@ -31,13 +35,14 @@ p {
 }
 
 .layout {
-  font-size: 0;
+  display: flex;
+  align-items: stretch;
+  gap: 2%;
   margin-bottom: 16px;
 }
 
 .content-box {
-  display: inline-block;
-  vertical-align: top;
+  display: block;
   background-color: #ffffff;
   border: 1px solid #d1d5db;
   padding: 12px;
@@ -46,7 +51,7 @@ p {
 
 .content {
   width: 68%;
-  margin-right: 2%;
+  margin-right: 0;
 }
 
 .sidebar {
@@ -88,7 +93,7 @@ p {
 }
 
 .contact-container {
-  width: 50%;
+  width: min(50%, 560px);
   margin: 24px auto;
   padding: 24px;
   background-color: #ffffff;
@@ -333,10 +338,76 @@ p {
     font-size: 0.9rem;
   }
 
+  .container {
+    padding: 14px;
+  }
+
+  .container .navbar {
+    height: auto;
+    min-height: 64px;
+    padding: 10px 12px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .container .logo {
+    font-size: 1rem;
+  }
+
+  .container .nav-links {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .layout {
+    display: block;
+  }
+
+  .content,
+  .sidebar {
+    width: 100%;
+    margin: 0 0 12px 0;
+  }
+
+  .contact-container {
+    width: 100%;
+    margin: 16px 0;
+    padding: 16px;
+  }
+
+  .contact-container button {
+    width: 100%;
+  }
+
+  .container .footer {
+    height: auto;
+    min-height: 56px;
+    padding: 12px;
+  }
+
   .hero-copy,
   .hero-visual,
   .info-card,
   .grow-box {
     font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .container .nav-links {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .container .nav-links li {
+    width: 100%;
+  }
+
+  .container .nav-links a {
+    display: block;
+    text-align: center;
   }
 }
