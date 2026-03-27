@@ -3,41 +3,65 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Yusuf - Hakkımda</title>
+  <title>Yusuf - Hakkimda</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <nav>
-      <ul>
+  <div class="wrapper">
+    <nav class="navbar">
+      <div class="logo">Yusuf Ipek</div>
+      <ul class="nav-links">
         <li><a href="index.html">Ana Sayfa</a></li>
-        <li><a href="about.html">Hakkımda</a></li>
-        <li><a href="interests.html">İlgi Alanlarım</a></li>
-        <li><a href="contact.html">İletişim</a></li>
+        <li><a href="about.html">Hakkimda</a></li>
+        <li><a href="interests.html">Ilgi Alanlarim</a></li>
+        <li><a href="contact.html">Iletisim</a></li>
       </ul>
     </nav>
 
-    <header>
-      <h1>Hakkımda</h1>
-      <p>Kendimi, çalışma yaklaşımımı ve odaklandığım alanları kısa şekilde anlattığım bölüm.</p>
-    </header>
+    <section class="hero">
+      <div class="hero-copy">
+        <h1>Hakkimda</h1>
+        <p>Bilgisayar muhendisligi alaninda otomasyon ve veri odakli sistemlere odaklaniyorum.</p>
+        <a class="hero-btn" href="interests.html">Ilgi Alanlarina Gec</a>
+      </div>
+      <div class="hero-visual">Profil Placeholder</div>
+    </section>
 
-    <main class="layout">
-      <section class="content-box content">
-        <h2>Ben Kimim?</h2>
-        <p>Ben Yusuf. Bilgisayar mühendisliği alanında ilerliyor, özellikle otomasyon, veri ve ölçeklenebilir sistemler üzerinde çalışıyorum.</p>
-        <p>Günlük hayatta bir problemi küçük parçalara ayırıp hızlı denemelerle sonuca ulaşmayı severim; sonra ölçümleyip geliştirmeye devam ederim.</p>
-      </section>
+    <section class="cards-section">
+      <article class="info-card">
+        <h2>Calisma Tarzi</h2>
+        <p>Problemi parcalara ayirip hizli denemelerle ilerlemeyi severim.</p>
+      </article>
+      <article class="info-card">
+        <h2>Temel Ilke</h2>
+        <p>Netlik, sadelik ve surekli iyilestirme benim icin onceliklidir.</p>
+      </article>
+      <article class="info-card">
+        <h2>Teknik Yon</h2>
+        <p>Backend, API ve otomasyon tarafinda uygulanabilir cozumler uretirim.</p>
+      </article>
+      <article class="info-card">
+        <h2>Ogrenme</h2>
+        <p>Her hafta yeni bir arac veya yaklasim denemeye ozen gosteririm.</p>
+      </article>
+      <article class="info-card">
+        <h2>Is Birligi</h2>
+        <p>Takim ile acik iletisim ve duzenli geri bildirimle hiz kazanirim.</p>
+      </article>
+      <article class="info-card">
+        <h2>Hedef</h2>
+        <p>Olceklenebilir ve uzun omurlu urun altyapilari gelistirmek.</p>
+      </article>
+    </section>
 
-      <aside class="content-box sidebar">
-        <h2>Kısa Notlar</h2>
-        <p>Benim için netlik, basitlik ve sürekli iyileştirme temel çalışma ilkeleridir.</p>
-        <p>Detaylı proje ve ilgi alanlarım için <a href="interests.html">İlgi Alanlarım</a> sayfasına geçebilirsiniz.</p>
-      </aside>
-    </main>
+    <section class="grow-recap">
+      <div class="grow-box grow-1">Kutu 1 - flex-grow: 1</div>
+      <div class="grow-box grow-2">Kutu 2 - flex-grow: 2</div>
+      <div class="grow-box grow-3">Kutu 3 - flex-grow: 1</div>
+    </section>
 
-    <footer>
-      <p>© 2026 Yusuf İpek - Tüm hakları saklıdır.</p>
+    <footer class="footer">
+      <p>&copy; 2026 Yusuf Ipek - Tum haklari saklidir.</p>
     </footer>
   </div>
 </body>
