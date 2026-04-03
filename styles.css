@@ -392,6 +392,200 @@ p {
   height: clamp(60px, 10vh, 92px);
 }
 
+/* Duyuru sayfasi */
+.announcement-shell {
+  position: relative;
+}
+
+.announcement-header {
+  background: linear-gradient(120deg, #ffffff, #eef4ff);
+}
+
+.announcement-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1.9fr) minmax(0, 1fr);
+  gap: clamp(14px, 1.6vw, 24px);
+  margin-bottom: var(--container-gap);
+}
+
+.promo-card {
+  position: relative;
+  min-height: 340px;
+  padding: clamp(22px, 2.2vw, 34px);
+  border: 1px solid #c7d2fe;
+  background: linear-gradient(150deg, #eff6ff 0%, #dbeafe 45%, #ffffff 100%);
+  overflow: hidden;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.promo-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 34px rgba(37, 99, 235, 0.16);
+}
+
+.promo-card h2,
+.promo-card p,
+.promo-action {
+  position: relative;
+  z-index: 3;
+}
+
+.promo-card p {
+  max-width: 58ch;
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+.promo-glow {
+  position: absolute;
+  top: -70px;
+  right: -40px;
+  width: 230px;
+  height: 230px;
+  border-radius: 0;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.35), rgba(59, 130, 246, 0));
+  z-index: 1;
+  animation: glowPulse 4s ease-in-out infinite;
+}
+
+.promo-ribbon {
+  position: absolute;
+  bottom: -40px;
+  left: -30px;
+  width: 220px;
+  height: 120px;
+  border-radius: 0;
+  background: rgba(29, 78, 216, 0.2);
+  z-index: 2;
+}
+
+.promo-action {
+  display: inline-block;
+  text-decoration: none;
+  background: #1d4ed8;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 0.62rem 1rem;
+  border-radius: 0;
+  transition: transform 180ms ease, background-color 180ms ease;
+}
+
+.promo-action:hover,
+.promo-action:focus-visible {
+  cursor: pointer;
+  background: #1e40af;
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.promo-action:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+.promo-chip {
+  position: absolute;
+  display: inline-block;
+  text-decoration: none;
+  color: #0f172a;
+  background: #ffffff;
+  border: 1px solid #bfdbfe;
+  border-radius: 0;
+  padding: 0.42rem 0.72rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  z-index: 5;
+  transition: transform 170ms ease, box-shadow 170ms ease;
+}
+
+.chip-date {
+  top: 20px;
+  right: 136px;
+  z-index: 6;
+}
+
+.chip-quota {
+  top: 50px;
+  right: 58px;
+  z-index: 7;
+}
+
+.chip-level {
+  bottom: 26px;
+  right: 24px;
+}
+
+.promo-chip:hover,
+.promo-chip:focus-visible {
+  cursor: pointer;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.14);
+  outline: none;
+}
+
+.announcement-info {
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  padding: clamp(14px, 1.5vw, 22px);
+  line-height: 1.55;
+}
+
+.fixed-helper {
+  position: fixed;
+  right: 18px;
+  bottom: 20px;
+  z-index: 999;
+  text-decoration: none;
+  background: #0f172a;
+  color: #ffffff;
+  border-radius: 0;
+  padding: 0.72rem 0.95rem;
+  font-weight: 700;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.22);
+  transition: transform 160ms ease, background-color 160ms ease;
+}
+
+.fixed-helper:hover,
+.fixed-helper:focus-visible {
+  cursor: pointer;
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.fixed-helper:active {
+  transform: scale(0.96);
+}
+
+.home-access-link {
+  display: inline-block;
+  margin-top: 4px;
+  color: #1d4ed8;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 160ms ease, transform 160ms ease;
+}
+
+.home-access-link:hover,
+.home-access-link:focus-visible {
+  cursor: pointer;
+  color: #1e40af;
+  transform: translateX(2px);
+  outline: none;
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 0.55;
+  }
+}
+
 .footer p {
   font-size: 0.95rem;
   margin: 0;
@@ -461,6 +655,34 @@ p {
   .grow-box {
     font-size: 0.9rem;
   }
+
+  .announcement-main {
+    grid-template-columns: 1fr;
+  }
+
+  .promo-card {
+    min-height: 360px;
+    padding-top: 86px;
+  }
+
+  .chip-date {
+    top: 18px;
+    left: 16px;
+    right: auto;
+  }
+
+  .chip-quota {
+    top: 18px;
+    left: 186px;
+    right: auto;
+  }
+
+  .chip-level {
+    top: 54px;
+    left: 16px;
+    right: auto;
+    bottom: auto;
+  }
 }
 
 @media (max-width: 520px) {
@@ -493,6 +715,33 @@ p {
 
   .contact-container .choice-option input {
     margin-top: 3px;
+  }
+
+  .fixed-helper {
+    right: 10px;
+    bottom: 12px;
+    font-size: 0.86rem;
+    padding: 0.58rem 0.78rem;
+  }
+
+  .promo-card {
+    min-height: 420px;
+    padding-top: 116px;
+  }
+
+  .chip-date {
+    top: 14px;
+    left: 12px;
+  }
+
+  .chip-quota {
+    top: 14px;
+    left: 148px;
+  }
+
+  .chip-level {
+    top: 52px;
+    left: 12px;
   }
 }
 
